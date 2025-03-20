@@ -125,7 +125,7 @@ void Player::Update()
 		transform_.position_.y -= 0.05f;
     }
 
-	if (transform_.position_.x > 10 && transform_.position_.z <= 5)
+	if (transform_.position_.x > 10 && transform_.position_.z >= 4)
 	{
 		SceneManager* pSM = (SceneManager*)FindObject("SceneManager");
 		pSM->ChangeScene(SCENE_ID_CLEAR);
