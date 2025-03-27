@@ -1,4 +1,5 @@
 #include "Player.h"
+#include "Enemy.h"
 #include "Stage.h"
 #include "Engine/Fbx.h"
 #include "Engine/Model.h"
@@ -29,10 +30,12 @@ void Player::Initialize()
 void Player::Update()
 {
 	Stage* stage_ = (Stage*)FindObject("Stage");
+	Enemy* enemy_ = (Enemy*)FindObject("Enemy");
 
 	XMFLOAT3 newPos_ = transform_.position_; //移動後の位置を保存
 	//float moveSpeed_ = 1.0f; //移動速度
 	float moveSpeed_ = 0.1f;
+	float playerSize = 0.2f; //プレイヤーのサイズ
 	float rotateSpeed_ = 2.0f; //回転速度
 
 	//カメラの回転
@@ -129,6 +132,14 @@ void Player::Update()
 	{
 		SceneManager* pSM = (SceneManager*)FindObject("SceneManager");
 		pSM->ChangeScene(SCENE_ID_CLEAR);
+	}
+
+	if (enemy_ && enemy_->CheckCollision(newPos_, playerSize))
+	{
+		// 衝突時の処理（ゲームオーバーなど）
+		SceneManager* pSM = (SceneManager*)FindObject("SceneManager");
+		pSM->ChangeScene(SCENE_ID_GAMEOVER);
+		return; // 衝突したので移動しない
 	}
 
 	//カメラの更新

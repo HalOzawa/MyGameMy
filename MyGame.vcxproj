@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="ClearScene.cpp" />
     <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Engine\Audio.cpp" />
     <ClCompile Include="Engine\BillBoard.cpp" />
     <ClCompile Include="Engine\BoxCollider.cpp" />
@@ -164,6 +165,7 @@
     <ClCompile Include="Engine\Texture.cpp" />
     <ClCompile Include="Engine\Transform.cpp" />
     <ClCompile Include="Engine\VFX.cpp" />
+    <ClCompile Include="OverScene.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayScene.cpp" />
     <ClCompile Include="Stage.cpp" />
@@ -172,6 +174,7 @@
   <ItemGroup>
     <ClInclude Include="ClearScene.h" />
     <ClInclude Include="Controller.h" />
+    <ClInclude Include="Enemy.h" />
     <ClInclude Include="Engine\Audio.h" />
     <ClInclude Include="Engine\BillBoard.h" />
     <ClInclude Include="Engine\BoxCollider.h" />
@@ -195,6 +198,7 @@
     <ClInclude Include="Engine\Texture.h" />
     <ClInclude Include="Engine\Transform.h" />
     <ClInclude Include="Engine\VFX.h" />
+    <ClInclude Include="OverScene.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayScene.h" />
     <ClInclude Include="Stage.h" />

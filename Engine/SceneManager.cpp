@@ -6,7 +6,7 @@
 #include "../TitleScene.h"
 #include "../PlayScene.h"
 #include "../ClearScene.h"
-//#include "../GameOverScene.h"
+#include "../OverScene.h"
 
 
 //コンストラクタ
@@ -44,7 +44,7 @@ void SceneManager::Update()
 		case SCENE_ID_TITLE: Instantiate<TitleScene>(this); break;
 		case SCENE_ID_PLAY: Instantiate<PlayScene>(this); break;
 		case SCENE_ID_CLEAR: Instantiate<ClearScene>(this); break;
-		//case SCENE_ID_GAMEOVER: Instantiate<GameOverScene>(this); break;
+		case SCENE_ID_GAMEOVER: Instantiate<OverScene>(this); break;
 		}
 		Audio::Initialize();
 		currentSceneID_ = nextSceneID_;

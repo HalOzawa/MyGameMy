@@ -45,8 +45,10 @@ void Stage::Initialize()
 	table[2][2] = { 2, 0 };
 	table[1][3] = { 3, 0 };
 	table[2][3] = { 3, 0 };
+	table[2][4] = { 3, 0 };
 	table[3][3] = { 3, 0 };
 	table[4][3] = { 3, 0 };
+	table[5][4] = { 3, 0 };
 	table[5][3] = { 3, 0 };
 	table[7][3] = { 3, 0 };
 	table[9][3] = { 3, 0 };

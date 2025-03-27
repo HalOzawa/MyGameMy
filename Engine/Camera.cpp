@@ -10,7 +10,7 @@ XMMATRIX _billBoard;
 //初期化（プロジェクション行列作成）
 void Camera::Initialize()
 {
-	_position = XMFLOAT3(0, 2.0, -0);	//カメラの位置
+	_position = XMFLOAT3(0, 2.0, 0);	//カメラの位置
 	_target = XMFLOAT3(0, 1.5, 0.5);	//カメラの焦点
 
 	//プロジェクション行列
